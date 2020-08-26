@@ -28,8 +28,9 @@ USER gitpod
 
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
 
-RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh \
-             && sdk install java 12.0.1.j9-adpt"
+RUN bash -c ". /home/gitpod/.sdkman/bin/sdkman-init.sh"
+
+RUN bash -c "sdk install java 12.0.1.j9-adpt"
 #RUN yes | sdkmanager --licenses
 
 #RUN yes | sdkmanager --update --channel=3
