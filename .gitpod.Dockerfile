@@ -30,6 +30,8 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}
 
 RUN export SDKMAN_DIR="/home/gitpod/.sdkman/" && curl -s "https://get.sdkman.io" | bash
 
+RUN sdk install java 8.0.265.j9-adpt
+
 #RUN yes | sdkmanager --licenses
 
 #RUN yes | sdkmanager --update --channel=3
